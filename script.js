@@ -9,20 +9,7 @@
       let rand2 = parseInt(insults[1].length * Math.random(),10);
       let rand3 = parseInt(insults[2].length * Math.random(),10);
       let insult = `Thou ${insults[0][rand1]} ${insults[1][rand2]} ${insults[2][rand3]}`;
-      document.querySelector('#insult').innerText = insult;
-      insult = "🎭 “"+insult+ "“\n\n#ShakespeareInsult\n";
-      document.querySelector('#tweet').href = `http://twitter.com/share?url=${encodeURIComponent('https://codepo8.github.io/shakespeare-insult-generator/')}&text=${encodeURIComponent(insult)}`;
+      alert(insult);
     }
     letitrip();
-    document.querySelector('#another').addEventListener('click',letitrip);
-    document.querySelector('#copy').addEventListener('click',e => {
-      navigator.clipboard.writeText(document.querySelector("#insult").innerText);
-    });
-    window.onload = function() {
-      navigator.clipboard.writeText('Hello Clipboard').then(function() {
-        document.querySelector('#copy').classList.remove('hidden');
-      }, function() {
-        document.querySelector('#copy').classList.add('hidden');
-      });
-    }
   </script>
